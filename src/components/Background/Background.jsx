@@ -12,11 +12,11 @@ const Background = ({ playStatus, heroCount }) => {
       </video>
     );
   } else if (heroCount === 0) {
-    return <img src={image1} className="background" alt="background image 1" />;
+    return <img src={image1} className="background fade-in" alt="background image 1" />;
   } else if (heroCount === 1) {
-    return <img src={image2} className="background" alt="background image 2" />;
+    return <img src={image2} className="background fade-in" alt="background image 2" />;
   } else if (heroCount === 2) {
-    return <img src={image3} className="background" alt="background image 3" />;
+    return <img src={image3} className="background fade-in" alt="background image 3" />;
   }
   return null; // In case heroCount is not 0, 1, or 2
 };

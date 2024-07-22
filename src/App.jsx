@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Background from "./components/Background/Background";
 import Hero from "./components/Hero/Hero";
@@ -13,6 +13,14 @@ function App() {
 
   const [heroCount, setHeroCount] = useState(2);
   const [playStatus, setPlayStatus] = useState(false);
+
+  useEffect(() => {
+    setInterval(() => {
+      setHeroCount((count) => {
+        return count === 2 ? 0 : count + 1;
+      });
+    }, 3000);
+  }, []);
 
   return (
     <div>
